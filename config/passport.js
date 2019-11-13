@@ -1,7 +1,7 @@
 const PassportJWT = require('passport-jwt');
 const JwtStrategy = PassportJWT.Strategy; // Generates the JWT
 const ExtractJwt = PassportJWT.ExtractJwt; // Extract the payload
-const secret = 'thisIsTheSecret';
+const secret = process.env.SECRET;
 
 const UserModel = require('../models/UserModel');
 
